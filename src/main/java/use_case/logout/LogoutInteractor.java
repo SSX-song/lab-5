@@ -1,9 +1,5 @@
 package use_case.logout;
 
-import entity.User;
-import use_case.change_password.ChangePasswordInputData;
-import use_case.change_password.ChangePasswordOutputData;
-
 /**
  * The Logout Interactor.
  */
@@ -24,11 +20,5 @@ public class LogoutInteractor implements LogoutInputBoundary {
         userDataAccessObject.setCurrentUsername(null);
         final LogoutOutputData logoutOutputData = new LogoutOutputData(username, false);
         this.logoutPresenter.prepareSuccessView(logoutOutputData);
-
-        // TODO: implement the logic of the Logout Use Case (depends on the LogoutInputData.java TODO)
-        // * get the username out of the input data,
-        // * set the username to null in the DAO
-        // * instantiate the `LogoutOutputData`, which needs to contain the username.
-        // * tell the presenter to prepare a success view.
     }
 }
